@@ -8,15 +8,6 @@
     background-position: center; 
   }
  
- .box {   
-    background-color:  rgb(253, 216, 2);
-    color: #132972;
-    font-weight: bolder;
-    margin-top: 20px;
-     border-radius: 10px;
-     box-shadow: 0 4px 8px rgba(162, 229, 250, 0.9);
-  }
-
 .header {
       color: #132972;
      padding: 15px;
@@ -31,32 +22,47 @@
     font-size: 25px;
  }
 
- .card {
-    transition: box-shadow 0.3s ease, transform 0.3s ease !important; 
-     box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
-} 
-.card:hover {
-    /* transform: translateY(-5px) !important;  */
-    transform: scale(1.05) !important;
+ .box {   
+    width: 60%;
+    background-color:  #111f4e ;
+    color:  rgb(253, 216, 2);
+    font-weight: bolder;
+    margin-top: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(162, 229, 250, 0.9);
+  }
+.card{
+    background-color: rgb(255, 255, 251) ;
+      color:   #111f4e ;
+}
+
+.card-header{
+     background-color:  rgb(253, 216, 2) ;
+}
+
+
+
+.btn{
+    background-color:  rgb(253, 216, 2) ;
+    color:  #111f4e;
 }
 
 .btn:hover{
-/* transform: scale(1.1) !important; */
- text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background-color:  #111f4e ;
+    color:  rgb(253, 216, 2);
+    font-weight: bolder;
+}
+.card-title , .card-text{
+  color:  #111f4e ;
+
 }
 
-.btnrainy, .btnwindy, .btnerror{
-    /* background-color: rgb(3, 51, 58);
-    color: white; */
-      background-color:  rgb(253, 216, 2);
-    color: #132972;
-}
-.btnrainy:hover{
-   background-color: rgb(0, 144, 163);
-    color: white;
-}
-
-.btnerror:hover{
-   background-color: rgb(0, 144, 163);
-    color: white;
+.minibox{
+    background-color:  #111f4e ;
+    color:  rgb(253, 216, 2);
+    font-weight: bolder;
+    margin-top: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(7, 7, 7, 0.9);
+     padding: 10px;
 }
