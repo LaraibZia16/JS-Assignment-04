@@ -232,23 +232,241 @@ else if(activity === "3") {
     }
 
 }
+// Even Numbers activity
+else if (activity === "4") {
 
+    var evenSt = +prompt("Enter a starting number:");
+    var evenEnd = +prompt("Enter an ending number:");
 
+    var result = "";
 
-// invalid input for activity selection
-else {
+    if (evenSt <= evenEnd) {
+
+        for (var i = evenSt; i <= evenEnd; i++) {
+
+            if (i % 2 === 0) {
+                result += i + "    ";
+            }
+
+        }
+
+        document.write(`
+
+        <div class="card text-center mt-4" style="width: 60%; margin: auto;">
+
+          <div class="card-header">
+            <h3>Even Numbers</h3>
+          </div>
+
+          <div class="card-body">
+
+            <h5 class="card-title mt-3">
+              Even Numbers From ${evenSt} to ${evenEnd}
+            </h5>
+
+            <h3 class="card-text mt-3 minibox">
+             ${result}
+            </h3>
+            <h4 class="mt-3">Even Numbers Are Divisible by 2</h4>
+            <a href="./index.html" class="btn mt-3"">
+              Try another activity
+            </a>
+
+          </div>
+
+        </div>
+
+        `);
+
+    } else {
 
         document.write(`
  <div class="card text-center mt-4" style="width: 60%; margin: auto;">
 
           <div class="card-header">
-            <h3>Invalid Input</h3>
+            <h3>Even Numbers</h3>
           </div>
 
           <div class="card-body">
 
             <h5 class="card-title">
-               Select a valid activity number from the list below: <br><br>
+               Invalid input. Please enter valid numbers.
+            </h5>
+
+            <a href="./index.html" class="btn mt-3"">
+              Try another activity
+            </a>
+
+          </div>
+
+        </div>
+        `);
+
+    }
+
+}
+// Odd Numbers activity
+else if (activity === "5") {
+
+    var oddSt = +prompt("Enter a starting number:");
+    var oddEnd = +prompt("Enter an ending number:");
+
+    var result = "";
+
+    if (oddSt <= oddEnd) {
+
+        for (var i = oddSt; i <= oddEnd; i++) {
+
+            if (i % 2 !== 0) {
+                result += i + "    ";
+            }
+
+        }
+
+        document.write(`
+
+        <div class="card text-center mt-4" style="width: 60%; margin: auto;">
+
+          <div class="card-header">
+            <h3>Odd Numbers</h3>
+          </div>
+
+          <div class="card-body">
+
+            <h5 class="card-title mt-3">
+              Odd Numbers From ${oddSt} to ${oddEnd}
+            </h5>
+
+            <h3 class="card-text mt-3 minibox">
+             ${result}
+            </h3>
+            <h4 class="mt-3">Odd Numbers Are Not Divisible by 2</h4>
+            <a href="./index.html" class="btn mt-3"">
+              Try another activity
+            </a>
+
+          </div>
+
+        </div>
+
+        `);
+
+    } else {
+
+        document.write(`
+ <div class="card text-center mt-4" style="width: 60%; margin: auto;">
+
+          <div class="card-header">
+            <h3>Odd Numbers</h3>
+          </div>
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+               Invalid input. Please enter valid numbers.
+            </h5>
+
+            <a href="./index.html" class="btn mt-3"">
+              Try another activity
+            </a>
+
+          </div>
+
+        </div>
+        `);
+
+    }
+
+}
+// Arithmetic Operations activity
+else if (activity === "6") {
+    var num1 = +prompt("Enter the first number:");
+    var operator = prompt("Enter the operator e.g (+, -, *, /, %):");
+    var num2 = +prompt("Enter the second number:");
+    var result;
+     if(operator === "+" || operator === "-" || operator === "*" || operator === "/" || operator === "%")
+       {
+        result = eval(num1 + operator + num2);
+         document.write(`
+
+        <div class="card text-center mt-4" style="width: 60%; margin: auto;">
+
+          <div class="card-header">
+            <h3>Arithmetic Operations</h3>
+          </div>
+
+          <div class="card-body">
+
+            <h5 class="card-title mt-3">
+              Arithmetic Operations 
+            </h5>
+
+            <h3 class="card-text mt-3 minibox">
+            ${num1} ${operator} ${num2} = ${result}
+            </h3>
+            <h4 class="mt-3">Arithmetic Operations Are Performed</h4>
+            <a href="./index.html" class="btn mt-3"">
+              Try another activity
+            </a>
+
+          </div>
+
+        </div>
+
+        `);
+
+    } else {
+
+        document.write(`
+ <div class="card text-center mt-4" style="width: 60%; margin: auto;">
+
+          <div class="card-header">
+            <h3>Arithmetic Operations</h3>
+          </div>
+
+          <div class="card-body">
+
+            <h5 class="card-title">
+               Invalid input. Please enter valid numbers and operator.
+            </h5>
+
+            <a href="./index.html" class="btn mt-3"">
+              Try another activity
+            </a>
+
+          </div>
+
+        </div>
+        `);
+
+       }
+
+    // if (operator === "+") { 
+    //     result = num1 + num2;
+    // }
+    // else if (operator === "-") {
+    //     result = num1 - num2;
+    // }
+    // else if (operator === "*") {
+    //     result = num1 * num2;
+    // }
+    // else if (operator === "/") {
+    //     result = num1 / num2;
+    // }
+  }
+// invalid input for activity selection
+else {
+ document.write(`
+ <div class="card text-center mt-4" style="width: 60%; margin: auto;">
+
+          <div class="card-header">
+            <h3>Math Activity Not Found</h3>
+          </div>
+          <div class="card-body">
+
+            <h5 class="card-title minibox" style="width: 80%;">
+               Sorry, we couldn't find the math activity you're looking for.<br> 
+               Please Select a valid activity number from the list below: <br><br>
                1.Forward Counting<br><br>
                2.Backward Counting<br><br>
                3.Multiplication Table<br><br>
@@ -267,3 +485,4 @@ else {
         `);
 
     }
+    // End of code
